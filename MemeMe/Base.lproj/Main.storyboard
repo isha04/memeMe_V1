@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1kk-DI-H8P">
+                                <rect key="frame" x="68" y="222.5" width="238" height="222"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="GW4-mn-PLZ"/>
+                                    <constraint firstAttribute="height" constant="222" id="kzM-OP-kKS"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raO-kH-TZE">
+                                <rect key="frame" x="152.5" y="141.5" width="70" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="HkJ-cK-p0y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGa-Dv-ZTe">
+                                <rect key="frame" x="125" y="516.5" width="125" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="BXc-e8-CmN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BottomToolBar" translatesAutoresizingMaskIntoConstraints="NO" id="Zsh-bQ-Rw3">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="x8n-CR-dii"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-sU-9sC" userLabel="albumButton">
+                                <rect key="frame" x="0.0" y="633.5" width="176" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="4si-Xu-96a"/>
+                                    <constraint firstAttribute="width" constant="176" id="mBP-a5-Dds"/>
+                                </constraints>
+                                <state key="normal" image="Album Button"/>
+                                <connections>
+                                    <action selector="pickImagefromAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhl-zV-P6v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLL-9r-5SO" userLabel="cameraButton">
+                                <rect key="frame" x="317" y="630" width="28" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="fhx-c4-4IZ"/>
+                                </constraints>
+                                <state key="normal" image="CameraButton"/>
+                                <connections>
+                                    <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEg-Mf-8b5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqG-RQ-fhq">
+                                <rect key="frame" x="3" y="17" width="67" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="hSH-1s-NOt"/>
+                                    <constraint firstAttribute="height" constant="64" id="zpV-0A-n7I"/>
+                                </constraints>
+                                <state key="normal" image="ShareButton"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqq-yu-l5A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFC-6z-k0d">
+                                <rect key="frame" x="236" y="27" width="125" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HK0-LM-78Q"/>
+                                    <constraint firstAttribute="width" constant="125" id="hRb-wr-XjL"/>
+                                </constraints>
+                                <state key="normal" image="CancelButton"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zsh-bQ-Rw3" secondAttribute="bottom" id="4Rb-3E-kDe"/>
+                            <constraint firstItem="gGa-Dv-ZTe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="85g-hW-cvB"/>
+                            <constraint firstItem="AFC-6z-k0d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="HF8-Tf-bVM"/>
+                            <constraint firstItem="raO-kH-TZE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMh-8S-e7p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AFC-6z-k0d" secondAttribute="trailing" constant="14" id="Sfk-Nc-GKb"/>
+                            <constraint firstItem="Zsh-bQ-Rw3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U9R-dG-LdN"/>
+                            <constraint firstItem="LQ2-sU-9sC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UyC-0Q-EZZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LQ2-sU-9sC" secondAttribute="bottom" constant="11.5" id="W0H-oX-dyX"/>
+                            <constraint firstItem="1kk-DI-H8P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XPE-Mk-Bee"/>
+                            <constraint firstItem="Zsh-bQ-Rw3" firstAttribute="centerX" secondItem="1kk-DI-H8P" secondAttribute="centerX" id="dQo-R7-DXp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xLL-9r-5SO" secondAttribute="bottom" constant="5" id="g4O-c0-MJD"/>
+                            <constraint firstItem="1kk-DI-H8P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g7R-1g-YDe"/>
+                            <constraint firstItem="MqG-RQ-fhq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="17" id="kF2-4M-CM3"/>
+                            <constraint firstItem="gGa-Dv-ZTe" firstAttribute="top" secondItem="1kk-DI-H8P" secondAttribute="bottom" constant="72" id="l4r-IY-yZW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xLL-9r-5SO" secondAttribute="trailing" constant="30" id="pzc-SN-EnA"/>
+                            <constraint firstItem="1kk-DI-H8P" firstAttribute="top" secondItem="raO-kH-TZE" secondAttribute="bottom" constant="47" id="qfb-QR-swt"/>
+                            <constraint firstItem="MqG-RQ-fhq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="yID-To-4Yu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomMemeText" destination="gGa-Dv-ZTe" id="hc7-gG-1DO"/>
+                        <outlet property="cameraButton" destination="xLL-9r-5SO" id="FXr-Vu-dEe"/>
+                        <outlet property="cancelButton" destination="AFC-6z-k0d" id="n9W-Ig-zhr"/>
+                        <outlet property="imageView" destination="1kk-DI-H8P" id="tce-Lr-sEQ"/>
+                        <outlet property="shareButton" destination="MqG-RQ-fhq" id="QQc-7m-Tmv"/>
+                        <outlet property="topMemeText" destination="raO-kH-TZE" id="cZi-af-OcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Album Button" width="50" height="11"/>
+        <image name="BottomToolBar" width="375" height="40"/>
+        <image name="CameraButton" width="28" height="21"/>
+        <image name="CancelButton" width="43" height="12"/>
+        <image name="ShareButton" width="19" height="27"/>
+    </resources>
+</document>
